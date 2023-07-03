@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const handleSubmit = (event) => {
@@ -6,7 +7,17 @@ const Contact = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const message = event.target.message.value;
-    console.log(name, email, message);
+
+    if (name && email && message) {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Message successfully send",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      event.target.reset();
+    }
   };
 
   return (

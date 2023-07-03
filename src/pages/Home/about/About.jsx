@@ -21,12 +21,12 @@ const About = () => {
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
           data-aos-once="false"
-          className="flex items-start md:w-1/2"
+          className="flex items-center justify-center md:w-1/2"
         >
           <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
-            <div className="bg-[#0000003a] rounded-2xl h-96">
+            <div className="bg-[#0000003a]  rounded-2xl h-96">
               <img
-                src="/mahadi_icon.jpg"
+                src="/mahadi2.jpg"
                 alt="Your Photo"
                 className="object-cover h-full w-full opacity-90"
               />
@@ -46,12 +46,11 @@ const About = () => {
           <div className="px-3 flex flex-col items-center md:items-start">
             <p className="text-[#8892b0]  text-xl mb-4">
               Hello there! I'm a web developer, and I'm very passionate and
-              dedicated to my work. With 3+ years experience as a professional
-              web developer. I have been building noteworthy UX/UI designs and
-              websites for years, which comply with the latest design trends. I
-              have acquired the skills and knowledge necessary to make your
-              project a success. I enjoy every step of the design process, from
-              discussion and collaboration.
+              dedicated to my work. With 1+ years experience as a professional
+              web developer. Currently I am studying CSE in city university.I
+              love to acquirer skills and knowledge. I am hardworking person and
+              also i am a first learner. I never give up in any station in my
+              life. I also love to travel, reading books and watching movies.
             </p>
             <div className="grid grid-cols-3 gap-3 mb-5">
               <Tilt tiltMaxAngleX={24} tiltMaxAngleY={24}>
@@ -67,7 +66,7 @@ const About = () => {
               <Tilt tiltMaxAngleX={24} tiltMaxAngleY={24}>
                 <div className="p-4 bg-[#0000003a] text-center">
                   <h1 className="text-white font-bold text-2xl">
-                    <CountUp end={25} duration={5} enableScrollSpy={true} />
+                    <CountUp end={5} duration={5} enableScrollSpy={true} />
                   </h1>
                   <p className="text-[#8892b0]">Project</p>
                   <p className="text-[#8892b0]">Completed</p>
@@ -78,8 +77,8 @@ const About = () => {
                   <h1 className="text-white font-bold text-2xl">
                     <CountUp end={3} duration={5} enableScrollSpy={true} />
                   </h1>
-                  <p className="text-[#8892b0]">Years</p>
-                  <p className="text-[#8892b0]">experience</p>
+                  <p className="text-[#8892b0]">Happy</p>
+                  <p className="text-[#8892b0]">Client</p>
                 </div>
               </Tilt>
             </div>
