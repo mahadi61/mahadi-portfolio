@@ -1,23 +1,44 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Contact = () => {
+  const form = useRef();
   const handleSubmit = (event) => {
     event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const message = event.target.message.value;
-
-    if (name && email && message) {
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Message successfully send",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      event.target.reset();
-    }
+    emailjs
+      .sendForm(
+        "service_s375nip",
+        "template_5lqvp1x",
+        form.current,
+        "0Q77JDCKB0dwZG6ji"
+      )
+      .then(
+        (result) => {
+          if (result.status == 200) {
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Message successfully send",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            event.target.reset();
+          }
+        },
+        (error) => {
+          if (error) {
+            Swal.fire({
+              position: "center",
+              icon: "error",
+              title: "Something Wrong",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        }
+      );
   };
 
   return (
@@ -37,6 +58,7 @@ const Contact = () => {
           className="md:w-1/2"
         >
           <form
+            ref={form}
             onSubmit={handleSubmit}
             className="max-w-lg mx-auto px-5 md:px-0"
           >
